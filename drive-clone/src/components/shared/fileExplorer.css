@@ -1,0 +1,16 @@
+.file-explorer {
+  margin: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}

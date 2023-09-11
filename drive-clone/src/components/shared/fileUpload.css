@@ -1,0 +1,52 @@
+.postform {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#postForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.upload-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#mediaInput {
+  display: none;
+}
+
+.upload-label::before {
+  content: "Choose File";
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fca311;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #fca311;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #fbb036;
+}
