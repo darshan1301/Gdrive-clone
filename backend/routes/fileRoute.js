@@ -1,6 +1,11 @@
 const express = require("express");
 const multer = require("multer");
-const {getFiles, addFiles, deleteFiles, updateFile} = require("../controllers/filesController");
+const {
+  getFiles,
+  addFiles,
+  deleteFiles,
+  updateFile,
+} = require("../controllers/filesController");
 const authentication = require("../middlewares/authentication");
 
 const router = express.Router();
@@ -11,7 +16,7 @@ const storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     const ext = file.mimetype.split("/")[1];
-    cb(null, file.originalname + "-" + Date.now() + "." + ext);
+    cb(null, Date.now() + file.originalname);
   },
 });
 
