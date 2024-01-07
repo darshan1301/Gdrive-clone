@@ -1,0 +1,40 @@
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+logs/
+*.log
+
+# Output of npm commands
+package-lock.json
+npm-debug.log
+
+# OS or Editor specific files
+.DS_Store
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+
+# Build output
+dist/
+build/
+out/
+
+# IDE files
+.idea/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Yarn
+yarn-error.log
+
+# User-specific files
+.npmrc
+.npmignore
