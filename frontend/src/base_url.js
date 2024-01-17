@@ -1,4 +1,4 @@
 // baseURL.js
-const base_url = "http://localhost:8000";
+const base_url = "https://gdriveclone.onrender.com";
 
 export default base_url;

@@ -23,6 +23,9 @@ const port = process.env.PORT;
 app.use("/user", userRouter);
 app.use("/folder", folderRouter);
 app.use("/file", fileRouter);
+app.get("/", (req, res) => {
+  res.send("Hello server");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
