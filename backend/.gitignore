@@ -1,40 +1,25 @@
 # Dependency directories
-node_modules/
+/node_modules
 
-# Environment files
+# Environment variables file (if using .env)
 .env
 
-# Logs
-logs/
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
 *.log
 
-# Output of npm commands
+# Build files
+/build
+
+# IDE-specific files (such as for Visual Studio Code)
+.vscode
+
+# Package lock files
 package-lock.json
-npm-debug.log
-
-# OS or Editor specific files
-.DS_Store
-.vscode/
-*.sublime-project
-*.sublime-workspace
-*.suo
-*.ntvs*
-
-# Build output
-dist/
-build/
-out/
-
-# IDE files
-.idea/
-
-# OS generated files
-Thumbs.db
-ehthumbs.db
-
-# Yarn
-yarn-error.log
+yarn.lock
 
 # User-specific files
 .npmrc
-.npmignore

@@ -1,7 +1,9 @@
+import base_url from "../base_url";
+
 ////////// USER LOGIN
 export const loginHandler = async (email, password) => {
   try {
-    const response = await fetch("http://localhost:8000/user/login", {
+    const response = await fetch(`${base_url}/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +20,7 @@ export const loginHandler = async (email, password) => {
 /////////USER SIGNUP
 export const signupHandler = async (formData) => {
   try {
-    const response = await fetch("http://localhost:8000/user/signup", {
+    const response = await fetch(`${base_url}/user/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

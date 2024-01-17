@@ -1,4 +1,4 @@
-const base_url = "http://localhost:8000";
+import base_url from "../base_url";
 
 /////////GET FOLDER
 export const getFolderHandler = async (headers) => {

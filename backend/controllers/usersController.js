@@ -32,19 +32,19 @@ const userSignup = async (req, res) => {
     await newUser.save();
 
     const rootDirectory = "./filesio";
-    
+
     if (!fs.existsSync(rootDirectory)) {
       fs.mkdirSync(rootDirectory);
       console.log(`Created directory: ${rootDirectory}`);
     }
 
-      const defaultFolder = new Folder({
-        name: "documents",
-        user: newUser._id, 
-      });
+    const defaultFolder = new Folder({
+      name: "documents",
+      user: newUser._id,
+    });
 
-      await defaultFolder.save();
-    
+    await defaultFolder.save();
+
     const tokenPayload = {
       userId: newUser._id,
       email: newUser.Email,
@@ -68,7 +68,7 @@ const userLogin = async (req, res) => {
     const user = await User.findOne({ Email: email });
 
     if (!user) {
-      console.log(user + " not found");
+      console.log("User not found");
       return res
         .status(404)
         .send(user + "User not found. Please check your email and try again.");
@@ -90,7 +90,7 @@ const userLogin = async (req, res) => {
     const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
-    
+
     res.status(200).json({ token: token, userId: user._id });
   } catch (error) {
     console.error("Error during user login:", error);

@@ -46,7 +46,7 @@ export default function Login() {
           />
         </div>
         <div className="input-group">
-          <label>Password: harry@22</label>
+          <label>Password: harry@00</label>
           <input
             type="password"
             value={password}
