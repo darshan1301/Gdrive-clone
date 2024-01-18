@@ -5,7 +5,6 @@ const fileRouter = require("./routes/fileRoute.js");
 const folderRouter = require("./routes/folderRoute.js");
 const userRouter = require("./routes/userRoute.js");
 const bodyParser = require("body-parser");
-const path = require("path");
 
 const { connectMongoDB } = require("./db.js");
 
@@ -23,6 +22,7 @@ const port = process.env.PORT;
 app.use("/user", userRouter);
 app.use("/folder", folderRouter);
 app.use("/file", fileRouter);
+
 app.get("/", (req, res) => {
   res.send("Hello server");
 });

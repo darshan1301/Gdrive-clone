@@ -10,6 +10,7 @@ import {
 } from "../../services/file.services";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteFile, setFiles, updateFile } from "./fileSlice";
+import BackButton from "../../components/ui/backButton";
 
 const File = () => {
   const files = useSelector((state) => state.files.files);
@@ -68,7 +69,10 @@ const File = () => {
     <React.Fragment>
       <FileUpload folderId={folderId} />
       <div className="file-container">
-        <h2 className="folder-title">{folderName}</h2>
+        <div className="fileHeader">
+          <h2 className="folder-title">{folderName}</h2>
+          <BackButton />
+        </div>
         <div className="file-list">
           {files.map((file) => (
             <div key={file._id} className="file-item">
